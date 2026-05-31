@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Booth — The booth comes to you.</title>
+<meta name="description" content="Booth is a government-grade digital companion that brings the ritual, trust, and privacy of the polling booth to remote voters. The booth comes to you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="logo.svg" />
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand"><img class="brand__logo" src="logo.svg" alt="Booth" width="30" height="30" />Booth</a>
+  <div class="nav__links">
+    <a href="#problem">The problem</a>
+    <a href="#research">Research</a>
+    <a href="#solution">Solution</a>
+    <a href="#features">Features</a>
+    <a href="#curtain">The Digital Curtain</a>
+  </div>
+  <div class="nav__right">
+    <a href="#research" class="login">Log in</a>
+    <a href="#cta" class="btn btn--green btn--sm">Get started</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="band hero" id="top">
+  <div class="wrap">
+    <div class="hero__panel reveal in">
+      <span class="eyebrow" style="justify-content:center;display:flex">Group 12 · Emerging Technologies</span>
+      <h1 class="d-1">The booth comes to you.</h1>
+      <p class="lead">A government-grade digital companion that carries the ritual, trust, and privacy of the polling booth to the 450 million voters living away from home.</p>
+      <div class="hero__cta">
+        <a href="#curtain" class="btn btn--green">Experience the demo <span class="arrow">→</span></a>
+        <a href="#problem" class="btn btn--light">See the problem</a>
+      </div>
+      <div class="hero__stage">
+        <div class="hero__chip hero__chip--a"><span class="tick">✓</span><div>Aadhaar verified<small>EPIC · KB-DL-05</small></div></div>
+        <div class="hero__chip hero__chip--b"><div>92% match<small>Dr. Vikram Sethi</small></div></div>
+        <div class="hero__chip hero__chip--c"><span class="tick">●</span><div>Polling open<small>until 5:00 PM</small></div></div>
+        <div class="device device--float">
+          <div class="device__screen">
+            <div class="scr active">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Karol Bagh, New Delhi · Lok Sabha 2024</span>
+              <h2 class="app-h">Your constituency is voting right now.</h2>
+              <p class="app-sub">You're registered in Karol Bagh but you're not there today. Cast your vote securely and unobserved — from here.</p>
+              <div class="app-card">
+                <span class="app-pill">● Polling open until 5:00 PM</span>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+                  <div><div style="font-size:12.5px;font-weight:700">Constituency ID</div><div style="font-size:11px;color:var(--on-dark-2);margin-top:3px">KB-DL-05</div></div>
+                  <div style="text-align:right"><div style="font-size:12.5px;font-weight:700;color:var(--green-bright)">✓ Aadhaar verified</div><div style="font-size:10.5px;color:var(--on-dark-2);margin-top:3px">✓ ECI registered</div></div>
+                </div>
+              </div>
+              <div class="app-btn app-btn--green" style="margin-top:16px">Cast my vote remotely</div>
+              <div class="dot-row"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= SCALE ======================= -->
+<section class="band band--base band--tight" id="scale">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The scale of Indian democracy</span>
+      <h2 class="d-2">The largest democratic exercise in human history.</h2>
+      <p class="lead">Built on massive physical infrastructure — and that same physicality is exactly what locks millions out.</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat reveal"><div class="num" data-count="970" data-suffix="M">0</div><div class="lbl">Voters</div><div class="desc">The largest single democratic exercise ever held.</div></div>
+      <div class="stat reveal" data-d="1"><div class="num" data-count="1.05" data-suffix="M" data-dec="2">0</div><div class="lbl">Polling booths</div><div class="desc">Physical infrastructure built for total reach.</div></div>
+      <div class="stat reveal" data-d="2"><div class="num neg" data-count="450" data-suffix="M">0</div><div class="lbl">Migrants excluded</div><div class="desc">Locked out — registered where they no longer live.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROBLEM (bento) ======================= -->
+<section class="band band--cream" id="problem">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Framing the problem space</span>
+      <h2 class="d-2">Trust in voting isn't digital.<br/>It's physical, social, and ritual.</h2>
+      <p class="lead">We broke voting down into its actors, rituals, and points of trust — and found the trust lives in things you can see and touch.</p>
+    </div>
+
+    <div class="bento">
+      <div class="b col-3 reveal">
+        <span class="b__tag">02 — Trust is physical</span>
+        <h3>People trust visible actions</h3>
+        <p>Booths, machines, and indelible ink are the proof. Trust is anchored to things you can witness — not to a backend you can't.</p>
+        <div class="viz viz--bars"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:88%"></i><i style="height:70%"></i><i style="height:54%"></i></div>
+      </div>
+      <div class="b col-3 reveal" data-d="1">
+        <span class="b__tag">03 — Voting is social</span>
+        <h3>Participation is shared</h3>
+        <p>Voting is seen, talked about, and performed together. It's a community ritual — the inked finger is a badge worn in public, not just a private transaction.</p>
+      </div>
+      <div class="b col-2 reveal">
+        <span class="b__tag">01 — Access gap</span>
+        <h3>Voting depends on location</h3>
+        <p>Single-day, single-place participation excludes everyone living away from their registered home.</p>
+      </div>
+      <div class="b col-2 b--green reveal" data-d="1">
+        <span class="b__tag">2024 election budget</span>
+        <div style="font-size:46px;font-weight:800;letter-spacing:-0.04em;margin-top:12px">₹1.35<span style="font-size:.5em"> L Cr</span></div>
+        <p style="margin-top:8px">The world's most expensive election — almost entirely the cost of moving people and machines into one room.</p>
+      </div>
+      <div class="b col-2 reveal" data-d="2">
+        <span class="b__tag">The digital divide</span>
+        <div style="font-size:46px;font-weight:800;letter-spacing:-0.04em;margin-top:12px">41<span style="font-size:.5em;color:var(--ink-3)"> vs </span>63<span style="font-size:.6em">%</span></div>
+        <p style="margin-top:8px">~41% female vs ~63% male internet usage — any digital system has to earn trust across it.</p>
+      </div>
+      <div class="b col-6 reveal">
+        <span class="b__tag">The current experience — signals that make voting feel real &amp; secure</span>
+        <div class="signal-list">
+          <div class="s"><div class="n">01</div><h4>Air-gapped security</h4><p>EVMs are battery-powered and network-isolated.</p></div>
+          <div class="s"><div class="n">02</div><h4>4 votes / minute</h4><p>A hardware limit that prevents booth capturing.</p></div>
+          <div class="s"><div class="n">03</div><h4>7-second receipt</h4><p>VVPAT gives a visible, auditable confirmation.</p></div>
+          <div class="s"><div class="n">04</div><h4>Indelible ink</h4><p>A 2–4 week marker — and the proudest social signal.</p></div>
+          <div class="s"><div class="n">05</div><h4>Restricted remotes</h4><p>Postal ballots exist, but only for a few groups.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RESEARCH / VOICES ======================= -->
+<section class="band band--lav" id="research">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Primary research · 6 interviews</span>
+      <h2 class="d-2">Voices from the field.</h2>
+      <p class="lead">We asked how people experience voting today — and what makes it feel real and trustworthy. Four themes emerged: social ritual, structural barriers, conditional trust, and privacy.</p>
+    </div>
+    <div class="voices">
+      <div class="voice q-mark reveal"><blockquote>I photographed my inked finger for social media — it's a great conversation starter for days.</blockquote><div class="voice__who"><div class="voice__ava">K</div><div><div class="voice__name">Krutadnya, 20</div><div class="voice__tag">On motivation</div></div></div></div>
+      <div class="voice q-mark reveal" data-d="1"><blockquote>The EVM emits a 'ding' — immediate auditory feedback that the vote was counted.</blockquote><div class="voice__who"><div class="voice__ava">M</div><div><div class="voice__name">Manisha, 46</div><div class="voice__tag">On trust</div></div></div></div>
+      <div class="voice q-mark reveal" data-d="2"><blockquote>A digital format would strip away the atmosphere that makes voting feel real.</blockquote><div class="voice__who"><div class="voice__ava">R</div><div><div class="voice__name">Rupama, 19</div><div class="voice__tag">On atmosphere</div></div></div></div>
+      <div class="voice q-mark reveal"><blockquote>I've missed every election but one — because I live away from my home constituency.</blockquote><div class="voice__who"><div class="voice__ava">Y</div><div><div class="voice__name">Yutesh, 26</div><div class="voice__tag">On access</div></div></div></div>
+      <div class="voice q-mark reveal" data-d="1"><blockquote>The booth makes the vote yours. It's the only place where it's impossible to be watched.</blockquote><div class="voice__who"><div class="voice__ava">S</div><div><div class="voice__name">Subhash, 50</div><div class="voice__tag">On privacy</div></div></div></div>
+      <div class="voice voice--ground reveal" data-d="2"><span class="eyebrow">Grounding question</span><blockquote style="margin-top:14px">How do people experience voting today, and what makes it feel real and trustworthy?</blockquote><div class="voice__tag">The question every Booth decision answers to</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INSIGHTS ======================= -->
+<section class="band band--base">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Key insights &amp; synthesis</span>
+      <h2 class="d-2">Three findings that reframed the brief.</h2>
+    </div>
+    <div class="insights">
+      <div class="insight reveal"><div class="idx">01</div><h3>The Ink Paradox</h3><p>Indelible ink — designed as fraud prevention — became the primary <em>social proof</em> of participation. The medium has overtaken the message.</p></div>
+      <div class="insight reveal" data-d="1"><div class="idx">02</div><h3>The Digital Trust Deficit</h3><p>Tech adoption doesn't correlate with trust. EVM skepticism persists across literacy levels — the gap is <em>emotional, not informational</em>.</p></div>
+      <div class="insight reveal" data-d="2"><div class="idx">03</div><h3>Atmospheric Weight</h3><p>Queues, heat, crowds shape decision confidence. Physical discomfort gets conflated with institutional friction — and friction reads as <em>legitimacy</em>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BENCHMARKS ======================= -->
+<section class="band band--mint">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Global benchmarks · digital success</span>
+      <h2 class="d-2">Where digital voting already works — and why.</h2>
+    </div>
+    <div class="bench">
+      <div class="bench-card reveal">
+        <span class="flag">Estonia</span>
+        <div class="big">51%</div>
+        <div class="cap">Online voting in the 2023 elections</div>
+        <div class="bar"><i data-bar="51"></i></div>
+        <p>A trusted e-ID infrastructure built over decades, plus an "override" system: digital votes are editable, and a physical vote always overrides and is final.</p>
+      </div>
+      <div class="bench-card reveal" data-d="1">
+        <span class="flag">Switzerland</span>
+        <div class="big">~90%</div>
+        <div class="cap">Postal ballot usage in some cantons</div>
+        <div class="bar"><i data-bar="90"></i></div>
+        <p>Remote voting is a habitual civic behaviour. Routine postal voting normalised voting-from-anywhere long before it ever went digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PERSONA + HMW ======================= -->
+<section class="band band--cream">
+  <div class="wrap">
+    <div class="persona">
+      <div class="reveal">
+        <span class="eyebrow">Persona · The Remote Voter</span>
+        <h2 class="d-2" style="margin-top:16px;font-size:clamp(28px,3.4vw,40px)">A digitally fluent voter, limited by location.</h2>
+        <p class="lead" style="margin-top:16px">Age 18–30 · student or young professional · living away from home. Able to use digital systems with ease, but unable to vote because of where they are.</p>
+        <div class="persona__cards">
+          <div class="mini-card neg"><div class="t">Barriers</div><p>Effortful — travel cost &amp; time for single-day participation. Low trust — tied to physical voting, not digital systems.</p></div>
+          <div class="mini-card"><div class="t">Motivation</div><p>Socially driven — the ink selfie, peer validation. Wants voting to feel meaningful and serious.</p></div>
+        </div>
+      </div>
+      <div class="reveal" data-d="2">
+        <div class="hmw">
+          <span class="eyebrow" style="color:var(--green-bright)">How might we</span>
+          <p class="q" style="margin-top:18px">How might we enable remote voters to participate remotely — while preserving <b>trust, legitimacy, and the social meaning</b> of voting?</p>
+          <div class="hmw__pills"><span>Accessibility</span><span>Trust</span><span>Social ritual</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SOLUTION / PILLARS (bento) ======================= -->
+<section class="band band--base" id="solution">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Solution overview · introducing Booth</span>
+      <h2 class="d-2">Redefining the civic experience.</h2>
+      <p class="lead">A government-grade digital companion bridging physical tradition and digital mobility. Five pillars carry the trust of the booth into the phone in your hand.</p>
+    </div>
+    <div class="bento">
+      <div class="b col-2 reveal">
+        <div class="b__ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <h3>Remote Inclusion</h3><p>Vote from where you are, in the constituency where you belong.</p>
+      </div>
+      <div class="b col-2 reveal" data-d="1">
+        <div class="b__ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-3 7.7-7 9-4-1.3-7-4.4-7-9V6l7-3z"/></svg></div>
+        <h3>Privacy Architecture</h3><p>A booth-grade private environment, recreated in software.</p>
+      </div>
+      <div class="b col-2 reveal" data-d="2">
+        <div class="b__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.4 12l2.4 2.4 4.8-5.2"/></svg></div>
+        <h3>Sensory Finality</h3><p>Haptic, visual, and audible signals that the vote is done.</p>
+      </div>
+      <div class="b col-3 reveal">
+        <div class="b__ic"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 19h12M5 9l7-2 7 2"/><path d="M5 9l-2.1 4.2a2.1 2.1 0 0 0 4.2 0L5 9z"/><path d="M19 9l-2.1 4.2a2.1 2.1 0 0 0 4.2 0L19 9z"/></svg></div>
+        <h3>Verified Neutrality</h3><p>Candidate data from public record, never editorialised — cross-referenced against manifesto points and voting history.</p>
+        <div class="viz viz--bars"><i style="height:54%"></i><i style="height:78%"></i><i style="height:42%"></i><i style="height:90%"></i><i style="height:60%"></i><i style="height:72%"></i></div>
+      </div>
+      <div class="b col-3 b--green reveal" data-d="1">
+        <div class="b__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.2 12l2 2 3.6-3.8"/></svg></div>
+        <h3>Civic Ritual</h3><p>A non-fakeable digital ink badge with haptic feedback — proof and pride, carried over from the inked finger into the phone.</p>
+        <div class="b__spacer"></div>
+        <div style="font-weight:700;font-size:15px">"The booth comes to you."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HOW IT WORKS (phases) ======================= -->
+<section class="band band--lav">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Information architecture</span>
+      <h2 class="d-2">How Booth works.</h2>
+      <p class="lead">Each phase builds trust progressively — identity → understanding → action → validation. End-to-end encrypted throughout.</p>
+    </div>
+    <div class="phases">
+      <div class="phase reveal"><div class="step">1</div><div class="ph-k">Onboarding</div><h3>Civic Identity</h3><span class="role">The handshake</span><ul><li>EPIC verification</li><li>Aadhaar link</li><li>Biometric confirm</li></ul></div>
+      <div class="phase reveal" data-d="1"><div class="step">2</div><div class="ph-k">Intelligence hub</div><h3>Informed Choice</h3><span class="role">The briefing</span><ul><li>Candidate hub</li><li>Policy insights</li><li>Constituency data</li></ul></div>
+      <div class="phase reveal" data-d="2"><div class="step">3</div><div class="ph-k">Locked ballot</div><h3>Integrity</h3><span class="role">The curtain</span><ul><li>Constituency check</li><li>Environment lock</li><li>10s confirm delay</li></ul></div>
+      <div class="phase reveal" data-d="3"><div class="step">4</div><div class="ph-k">Social loop</div><h3>Celebration</h3><span class="role">The ink</span><ul><li>Digital ink badge</li><li>Share badge</li><li>Participation metrics</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FEATURES (interactive) ======================= -->
+<section class="band band--grey" id="features">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Features</span>
+      <h2 class="d-2">What can Booth do?</h2>
+      <p class="lead">Four moves that turn a phone into a trusted polling booth. Tap a feature to see it.</p>
+    </div>
+    <div class="feat-row">
+      <div class="feat-list reveal">
+        <div class="feat is-active" data-screen="home"><div class="feat__no">01</div><div><span class="role">The handshake</span><h3>Civic Identity</h3><p>Instant Aadhaar-verified profiles that auto-detect your home constituency — so your vote lands where it belongs.</p></div></div>
+        <div class="feat" data-screen="match"><div class="feat__no">02</div><div><span class="role">The information hub</span><h3>Informed Choice</h3><p>Structured candidate information from public data, matched to the issues you actually care about.</p></div></div>
+        <div class="feat" data-screen="secure"><div class="feat__no">03</div><div><span class="role">The curtain</span><h3>The Remote Booth</h3><p>A system-locked, private environment that blocks recording, calls, and interruptions while you vote.</p></div></div>
+        <div class="feat" data-screen="receipt"><div class="feat__no">04</div><div><span class="role">The ink</span><h3>The Social Ritual</h3><p>A non-fakeable digital badge with haptic feedback — the signal that your vote is final, and yours to show.</p></div></div>
+      </div>
+
+      <div class="reveal" data-d="2" style="display:flex;justify-content:center">
+        <div class="device" id="featDevice">
+          <div class="device__screen">
+            <div class="scr active" data-scr="home">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Your constituency. Your vote.</span>
+              <h2 class="app-h">Karol Bagh, New Delhi</h2>
+              <p class="app-sub">Lok Sabha 2024 · registered &amp; verified</p>
+              <div class="cand"><div class="cand__ava c1">✓</div><div><div class="cand__name">Aadhaar verified</div><div class="cand__party">EPIC · KB-DL-05</div></div><div class="cand__match">●<small>Live</small></div></div>
+              <div class="cand"><div class="cand__ava c2">📍</div><div><div class="cand__name">Home constituency detected</div><div class="cand__party">Auto-matched from EPIC</div></div></div>
+              <div class="app-btn app-btn--green">Start voting</div>
+              <div class="dot-row"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="match">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Match · based on your issues</span>
+              <h2 class="app-h">Who fits your priorities?</h2>
+              <p class="app-sub">Cross-referenced against 12 manifesto points &amp; 4 years of record.</p>
+              <div class="cand"><div class="cand__ava c1">VS</div><div><div class="cand__name">Dr. Vikram Sethi</div><div class="cand__party">Incumbent</div></div><div class="cand__match">92%<small>match</small></div></div>
+              <div class="cand"><div class="cand__ava c2">SC</div><div><div class="cand__name">Sarah Chen</div><div class="cand__party">Challenger</div></div><div class="cand__match">61%<small>match</small></div></div>
+              <div class="cand"><div class="cand__ava c3">AV</div><div><div class="cand__name">Amitabh Varma</div><div class="cand__party">People's Unity</div></div><div class="cand__match">48%<small>match</small></div></div>
+              <div class="app-btn" style="margin-top:14px">Compare all candidates</div>
+              <div class="dot-row"><i></i><i class="on"></i><i></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="secure">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Secure</span></div>
+              <span class="app-eyebrow">Securing your environment</span>
+              <h2 class="app-h">The Digital Curtain</h2>
+              <p class="app-sub">These checks ensure your vote is private and unobserved.</p>
+              <div class="secure-grid">
+                <div class="secure-cell"><div class="ic">📷</div><div class="t">Camera blocked</div></div>
+                <div class="secure-cell"><div class="ic">📞</div><div class="t">Calls blocked</div></div>
+                <div class="secure-cell"><div class="ic">🖥️</div><div class="t">Screen blocked</div></div>
+                <div class="secure-cell"><div class="ic">🔕</div><div class="t">Muted</div></div>
+              </div>
+              <div class="check"><div class="ic ok">✓</div><div>End-to-end encrypted<small>No one can see how you voted</small></div></div>
+              <div class="check"><div class="ic ok">✓</div><div>Session token generated<small>Tied to your device &amp; EPIC</small></div></div>
+              <div class="app-btn app-btn--green">Continue</div>
+              <div class="dot-row"><i></i><i></i><i class="on"></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="receipt">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <div class="receipt-seal">✓</div>
+              <h2 class="app-h" style="text-align:center">Your vote has been recorded.</h2>
+              <p class="app-sub" style="text-align:center">Encrypted and submitted securely. No one can see how you voted.</p>
+              <div style="margin-top:14px">
+                <div class="receipt-row"><span>Reference</span><span>BOOTH-2024-KBN-48271</span></div>
+                <div class="receipt-row"><span>Timestamp</span><span>26 Apr 2024 · 11:34 AM</span></div>
+                <div class="receipt-row"><span>Constituency</span><span>Karol Bagh, New Delhi</span></div>
+              </div>
+              <div class="app-btn app-btn--green" style="margin-top:16px">Share my digital ink</div>
+              <div class="dot-row"><i></i><i></i><i></i><i class="on"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE DIGITAL CURTAIN (dark band) ======================= -->
+<section class="band band--dark" id="curtain">
+  <div class="wrap">
+    <div class="head head--left reveal" style="max-width:760px">
+      <span class="eyebrow"><span class="dot"></span>Core innovation</span>
+      <h2 class="d-2">The Digital Curtain.</h2>
+      <p class="lead">Recreating the sanctity of the polling booth through technology — so every remote vote is free, private, and deliberate. Run the demo.</p>
+    </div>
+
+    <div class="curtain">
+      <div>
+        <div class="curtain__steps">
+          <div class="cstep" data-step="1"><div class="row"><span class="n">01</span><h4>Environment Lockdown</h4></div><p>Blocks screen sharing, recording, and incoming calls for the entire ballot. The booth's secrecy, enforced in software.</p></div>
+          <div class="cstep" data-step="2"><div class="row"><span class="n">02</span><h4>Intentional Friction</h4></div><p>A 10-second mandatory delay before the vote can be confirmed — deliberate weight, so the moment feels as serious as it is.</p></div>
+          <div class="cstep" data-step="3"><div class="row"><span class="n">03</span><h4>Anti-Coercion Override</h4></div><p>A one-time re-vote window inside a secure grace period. If you were watched or pressured, you can quietly change your vote.</p></div>
+        </div>
+        <div class="demo-controls">
+          <button class="btn btn--green" id="enterBooth">Enter the booth →</button>
+          <button class="btn btn--ghost-dark" id="resetBooth">Reset</button>
+        </div>
+      </div>
+
+      <div class="curtain__device">
+        <div class="device">
+          <div class="device__screen" id="curtainScreen">
+            <div class="scr active" data-cscr="intro">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Ready when you are</span>
+              <h2 class="app-h">You're about to enter the booth.</h2>
+              <p class="app-sub">Your camera, calls, screen capture and notifications will be secured for the duration of your vote.</p>
+              <div class="app-card" style="margin-top:auto">
+                <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:linear-gradient(140deg,#1db954,#0b5e2a);display:grid;place-items:center;font-weight:800;color:#fff">KB</span><div><div style="font-size:13px;font-weight:700">Karol Bagh, New Delhi</div><div style="font-size:11px;color:var(--on-dark-2)">is voting right now</div></div></div>
+              </div>
+              <div class="app-btn" style="margin-top:14px;opacity:.55">Press "Enter the booth"</div>
+            </div>
+            <div class="scr" data-cscr="lock">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Securing</span></div>
+              <span class="app-eyebrow">Securing your environment</span>
+              <h2 class="app-h">Building the curtain…</h2>
+              <div style="margin-top:16px" id="lockChecks">
+                <div class="check" data-lc="0"><div class="ic wait">○</div><div>Camera &amp; microphone<small>Disabling access</small></div></div>
+                <div class="check" data-lc="1"><div class="ic wait">○</div><div>Screen recording<small>Blocking capture</small></div></div>
+                <div class="check" data-lc="2"><div class="ic wait">○</div><div>Incoming calls<small>Silencing notifications</small></div></div>
+                <div class="check" data-lc="3"><div class="ic wait">○</div><div>Session token<small>Generating unique identifier</small></div></div>
+              </div>
+              <div class="app-btn" id="lockProgress" style="margin-top:auto;background:var(--d-2);color:var(--on-dark-2)">0 of 4 checks complete</div>
+            </div>
+            <div class="scr" data-cscr="confirm">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Secure session</span></div>
+              <span class="app-eyebrow" style="text-align:center;display:block">You are about to cast your vote</span>
+              <div class="ring-wrap">
+                <svg width="150" height="150" viewBox="0 0 150 150">
+                  <circle cx="75" cy="75" r="66" fill="none" stroke="#2a2a2a" stroke-width="8"/>
+                  <circle id="ringFill" cx="75" cy="75" r="66" fill="none" stroke="#1ed760" stroke-width="8" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="0" transform="rotate(-90 75 75)"/>
+                </svg>
+                <div class="ring-num"><span id="ringNum">10</span><small>seconds</small></div>
+              </div>
+              <div class="cand" style="margin-top:4px"><div class="cand__ava c1">VS</div><div><div class="cand__name">Dr. Vikram Sethi</div><div class="cand__party">Bharatiya Janata Party · Karol Bagh</div></div></div>
+              <p class="app-sub" style="text-align:center;margin-top:12px">This action is final and cannot be undone.</p>
+              <div class="app-btn app-btn--green" id="confirmBtn" style="margin-top:14px;opacity:.5;pointer-events:none">Confirm in <span id="confirmCount">10</span>s</div>
+            </div>
+            <div class="scr" data-cscr="done">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <div class="receipt-seal">✓</div>
+              <h2 class="app-h" style="text-align:center">Your vote has been recorded.</h2>
+              <p class="app-sub" style="text-align:center">Encrypted &amp; submitted to the Election Commission of India.</p>
+              <div style="margin-top:12px">
+                <div class="receipt-row"><span>Reference</span><span>BOOTH-2024-KBN-48271</span></div>
+                <div class="receipt-row"><span>Timestamp</span><span>26 Apr 2024 · 11:34 AM</span></div>
+              </div>
+              <div style="background:var(--d-1);border-radius:12px;padding:14px;margin-top:14px">
+                <div style="font-size:12.5px;font-weight:700;color:var(--green-bright)">↻ Anti-coercion override active</div>
+                <div style="font-size:11px;color:var(--on-dark-2);margin-top:4px">Change your vote once within the secure grace window.</div>
+                <div class="app-btn" id="overrideBtn" style="margin-top:12px;font-size:11px;padding:12px">↻ Change my vote</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section class="band cta" id="cta">
+  <div class="wrap cta__inner reveal">
+    <span class="eyebrow">Independent civic platform · not affiliated with ECI</span>
+    <h2>Bring the booth to every voter.</h2>
+    <p class="lead">Remote inclusion without losing trust, ritual, or social legitimacy. That's the whole brief — and the whole product.</p>
+    <div class="cta__btns">
+      <a href="#top" class="btn btn--green">Get started <span class="arrow">→</span></a>
+      <a href="#research" class="btn btn--ghost-dark">Read the research</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__col">
+        <a href="#top" class="brand"><img class="brand__logo" src="logo.svg" alt="Booth" width="30" height="30" />Booth</a>
+        <p class="foot__about">A government-grade digital companion bridging physical tradition and digital mobility. The booth comes to you.</p>
+      </div>
+      <div class="foot__col">
+        <h5>Platform</h5>
+        <a href="#solution">Civic Identity</a>
+        <a href="#features">Intelligence Hub</a>
+        <a href="#curtain">The Digital Curtain</a>
+        <a href="#solution">Digital Ink</a>
+      </div>
+      <div class="foot__col">
+        <h5>Research</h5>
+        <a href="#scale">The scale</a>
+        <a href="#research">Field interviews</a>
+        <a href="#research">Key insights</a>
+        <a href="#research">Global benchmarks</a>
+      </div>
+      <div class="foot__col">
+        <h5>Project</h5>
+        <a href="#top">Group 12</a>
+        <a href="#features">Features</a>
+        <a href="#cta">Privacy &amp; terms</a>
+        <a href="#top">Methodology</a>
+      </div>
+    </div>
+    <div class="foot__meta">
+      <div class="credits">Designed by <b>Shreya Patle</b> &amp; <b>Rachit Kayath</b> · Group 12 — Emerging Technologies</div>
+      <div>© 2026 Booth · A civic design study</div>
+    </div>
+  </div>
+  <div class="wordmark">booth<span class="dot">.</span></div>
+  <div class="disclaim">Independent civic platform · Not affiliated with the Election Commission of India</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
