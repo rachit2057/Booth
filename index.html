@@ -1,24 +1,324 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-    />
-    <meta name="theme-color" content="#1c7a4d" />
-    <!-- iOS: let it run full-screen when added to the home screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Booth" />
-    <title>Booth</title>
-    <style>
-      html, body, #root { margin: 0; height: 100%; background: #f7f9f7; }
-      * { -webkit-tap-highlight-color: transparent; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Booth — The booth comes to you.</title>
+<meta name="description" content="Booth lets you cast a private, government-grade vote from anywhere — even when you're far from your home constituency. The booth comes to you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="logo.svg" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  if (window.gsap) {
+    document.documentElement.classList.add('anim');
+    setTimeout(function () { if (!window.__boothAnim) document.documentElement.classList.remove('anim'); }, 2500);
+  }
+</script>
+</head>
+<body>
+
+<div class="nav-progress" id="navProgress"></div>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand"><img class="brand__logo" src="logo.svg" alt="Booth" width="30" height="30" />Booth</a>
+  <div class="nav__links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#curtain">The Digital Curtain</a>
+    <a href="research.html">Case study</a>
+  </div>
+  <div class="nav__right">
+    <a href="research.html" class="login">Case study</a>
+    <a href="#cta" class="btn btn--green btn--sm">Get started</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="band hero" id="top">
+  <div class="wrap">
+    <div class="hero__panel">
+      <span class="eyebrow" data-h style="justify-content:center;display:flex">Secure remote voting · India</span>
+      <h1 class="d-1" data-h>The booth comes to you.</h1>
+      <p class="lead" data-h>450 million Indians live far from where they're registered to vote. Booth lets them cast a private, government-grade ballot — from anywhere.</p>
+      <div class="hero__cta" data-h>
+        <a href="#how" class="btn btn--green">See how it works <span class="arrow">→</span></a>
+        <a href="#curtain" class="btn btn--light">Try the live demo</a>
+      </div>
+      <div class="hero__stage">
+        <div class="hero__chip hero__chip--a" data-h><span class="tick">✓</span><div>Aadhaar verified<small>EPIC · KB-DL-05</small></div></div>
+        <div class="hero__chip hero__chip--b" data-h><div>92% match<small>Dr. Vikram Sethi</small></div></div>
+        <div class="hero__chip hero__chip--c" data-h><span class="tick">●</span><div>Polling open<small>until 5:00 PM</small></div></div>
+        <div class="device" data-h>
+          <div class="device__screen">
+            <div class="scr active">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Karol Bagh, New Delhi · Lok Sabha 2024</span>
+              <h2 class="app-h">Your constituency is voting right now.</h2>
+              <p class="app-sub">You're registered in Karol Bagh but you're not there today. Cast your vote securely and unobserved — from here.</p>
+              <div class="app-card">
+                <span class="app-pill">● Polling open until 5:00 PM</span>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+                  <div><div style="font-size:12.5px;font-weight:700">Constituency ID</div><div style="font-size:11px;color:var(--on-dark-2);margin-top:3px">KB-DL-05</div></div>
+                  <div style="text-align:right"><div style="font-size:12.5px;font-weight:700;color:var(--green-bright)">✓ Aadhaar verified</div><div style="font-size:10.5px;color:var(--on-dark-2);margin-top:3px">✓ ECI registered</div></div>
+                </div>
+              </div>
+              <div class="app-btn app-btn--green" style="margin-top:16px">Cast my vote remotely</div>
+              <div class="dot-row"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= SCALE ======================= -->
+<section class="band band--base" id="scale">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The scale of Indian democracy</span>
+      <h2 class="d-2">The largest democratic exercise in human history.</h2>
+      <p class="lead">Built on massive physical infrastructure — and that same physicality is exactly what locks millions out.</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat reveal"><div class="num" data-count="970" data-suffix="M">0</div><div class="lbl">Voters</div><div class="desc">The largest single democratic exercise ever held.</div></div>
+      <div class="stat reveal" data-d="1"><div class="num" data-count="1.05" data-suffix="M" data-dec="2">0</div><div class="lbl">Polling booths</div><div class="desc">Physical infrastructure built for total reach.</div></div>
+      <div class="stat reveal" data-d="2"><div class="num neg" data-count="450" data-suffix="M">0</div><div class="lbl">Migrants excluded</div><div class="desc">Locked out — registered where they no longer live.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HOW BOOTH WORKS (IA phases) ======================= -->
+<section class="band band--lav" id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Information architecture</span>
+      <h2 class="d-2">How Booth works.</h2>
+      <p class="lead">Each phase builds trust progressively — identity → understanding → action → validation. End-to-end encrypted throughout.</p>
+    </div>
+    <div class="phases">
+      <div class="phase reveal"><div class="step">1</div><div class="ph-k">Onboarding</div><h3>Civic Identity</h3><span class="role">The handshake</span><ul><li>EPIC verification</li><li>Aadhaar link</li><li>Biometric confirm</li></ul></div>
+      <div class="phase reveal" data-d="1"><div class="step">2</div><div class="ph-k">Intelligence hub</div><h3>Informed Choice</h3><span class="role">The briefing</span><ul><li>Candidate hub</li><li>Policy insights</li><li>Constituency data</li></ul></div>
+      <div class="phase reveal" data-d="2"><div class="step">3</div><div class="ph-k">Locked ballot</div><h3>Integrity</h3><span class="role">The curtain</span><ul><li>Constituency check</li><li>Environment lock</li><li>10s confirm delay</li></ul></div>
+      <div class="phase reveal" data-d="3"><div class="step">4</div><div class="ph-k">Social loop</div><h3>Celebration</h3><span class="role">The ink</span><ul><li>Digital ink badge</li><li>Share badge</li><li>Participation metrics</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FEATURES (interactive) ======================= -->
+<section class="band band--grey" id="features">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Features</span>
+      <h2 class="d-2">What can Booth do?</h2>
+      <p class="lead">Four moves that turn a phone into a trusted polling booth. Tap a feature to see it.</p>
+    </div>
+    <div class="feat-row">
+      <div class="feat-list reveal">
+        <div class="feat is-active" data-screen="home"><div class="feat__no">01</div><div><span class="role">The handshake</span><h3>Civic Identity</h3><p>Instant Aadhaar-verified profiles that auto-detect your home constituency — so your vote lands where it belongs.</p></div></div>
+        <div class="feat" data-screen="match"><div class="feat__no">02</div><div><span class="role">The information hub</span><h3>Informed Choice</h3><p>Structured candidate information from public data, matched to the issues you actually care about.</p></div></div>
+        <div class="feat" data-screen="secure"><div class="feat__no">03</div><div><span class="role">The curtain</span><h3>The Remote Booth</h3><p>A system-locked, private environment that blocks recording, calls, and interruptions while you vote.</p></div></div>
+        <div class="feat" data-screen="receipt"><div class="feat__no">04</div><div><span class="role">The ink</span><h3>The Social Ritual</h3><p>A non-fakeable digital badge with haptic feedback — the signal that your vote is final, and yours to show.</p></div></div>
+      </div>
+
+      <div class="reveal" data-d="2" style="display:flex;justify-content:center">
+        <div class="device" id="featDevice">
+          <div class="device__screen">
+            <div class="scr active" data-scr="home">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Your constituency. Your vote.</span>
+              <h2 class="app-h">Karol Bagh, New Delhi</h2>
+              <p class="app-sub">Lok Sabha 2024 · registered &amp; verified</p>
+              <div class="cand"><div class="cand__ava c1">✓</div><div><div class="cand__name">Aadhaar verified</div><div class="cand__party">EPIC · KB-DL-05</div></div><div class="cand__match">●<small>Live</small></div></div>
+              <div class="cand"><div class="cand__ava c2">📍</div><div><div class="cand__name">Home constituency detected</div><div class="cand__party">Auto-matched from EPIC</div></div></div>
+              <div class="app-btn app-btn--green">Start voting</div>
+              <div class="dot-row"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="match">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Match · based on your issues</span>
+              <h2 class="app-h">Who fits your priorities?</h2>
+              <p class="app-sub">Cross-referenced against 12 manifesto points &amp; 4 years of record.</p>
+              <div class="cand"><div class="cand__ava c1">VS</div><div><div class="cand__name">Dr. Vikram Sethi</div><div class="cand__party">Incumbent</div></div><div class="cand__match">92%<small>match</small></div></div>
+              <div class="cand"><div class="cand__ava c2">SC</div><div><div class="cand__name">Sarah Chen</div><div class="cand__party">Challenger</div></div><div class="cand__match">61%<small>match</small></div></div>
+              <div class="cand"><div class="cand__ava c3">AV</div><div><div class="cand__name">Amitabh Varma</div><div class="cand__party">People's Unity</div></div><div class="cand__match">48%<small>match</small></div></div>
+              <div class="app-btn" style="margin-top:14px">Compare all candidates</div>
+              <div class="dot-row"><i></i><i class="on"></i><i></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="secure">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Secure</span></div>
+              <span class="app-eyebrow">Securing your environment</span>
+              <h2 class="app-h">The Digital Curtain</h2>
+              <p class="app-sub">These checks ensure your vote is private and unobserved.</p>
+              <div class="secure-grid">
+                <div class="secure-cell"><div class="ic">📷</div><div class="t">Camera blocked</div></div>
+                <div class="secure-cell"><div class="ic">📞</div><div class="t">Calls blocked</div></div>
+                <div class="secure-cell"><div class="ic">🖥️</div><div class="t">Screen blocked</div></div>
+                <div class="secure-cell"><div class="ic">🔕</div><div class="t">Muted</div></div>
+              </div>
+              <div class="check"><div class="ic ok">✓</div><div>End-to-end encrypted<small>No one can see how you voted</small></div></div>
+              <div class="check"><div class="ic ok">✓</div><div>Session token generated<small>Tied to your device &amp; EPIC</small></div></div>
+              <div class="app-btn app-btn--green">Continue</div>
+              <div class="dot-row"><i></i><i></i><i class="on"></i><i></i></div>
+            </div>
+            <div class="scr" data-scr="receipt">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <div class="receipt-seal">✓</div>
+              <h2 class="app-h" style="text-align:center">Your vote has been recorded.</h2>
+              <p class="app-sub" style="text-align:center">Encrypted and submitted securely. No one can see how you voted.</p>
+              <div style="margin-top:14px">
+                <div class="receipt-row"><span>Reference</span><span>BOOTH-2024-KBN-48271</span></div>
+                <div class="receipt-row"><span>Timestamp</span><span>26 Apr 2024 · 11:34 AM</span></div>
+                <div class="receipt-row"><span>Constituency</span><span>Karol Bagh, New Delhi</span></div>
+              </div>
+              <div class="app-btn app-btn--green" style="margin-top:16px">Share my digital ink</div>
+              <div class="dot-row"><i></i><i></i><i></i><i class="on"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE DIGITAL CURTAIN (dark band, signature demo) ======================= -->
+<section class="band band--dark" id="curtain">
+  <div class="wrap">
+    <div class="head head--left reveal" style="max-width:680px">
+      <span class="eyebrow"><span class="dot"></span>The core innovation</span>
+      <h2 class="d-2">The Digital Curtain.</h2>
+      <p class="lead">A booth-grade private environment, recreated in software — so every remote vote is free, private, and deliberate. Run it yourself.</p>
+    </div>
+
+    <div class="curtain">
+      <div>
+        <div class="curtain__steps">
+          <div class="cstep" data-step="1"><div class="row"><span class="n">01</span><h4>Environment Lockdown</h4></div><p>Blocks screen recording, sharing, and incoming calls for the whole ballot.</p></div>
+          <div class="cstep" data-step="2"><div class="row"><span class="n">02</span><h4>Intentional Friction</h4></div><p>A 10-second delay before you can confirm — the moment is meant to feel serious.</p></div>
+          <div class="cstep" data-step="3"><div class="row"><span class="n">03</span><h4>Anti-Coercion Override</h4></div><p>One quiet re-vote, if you were watched or pressured.</p></div>
+        </div>
+        <div class="demo-controls">
+          <button class="btn btn--green" id="enterBooth">Enter the booth →</button>
+          <button class="btn btn--ghost-dark" id="resetBooth">Reset</button>
+        </div>
+      </div>
+
+      <div class="curtain__device">
+        <div class="device">
+          <div class="device__screen" id="curtainScreen">
+            <div class="scr active" data-cscr="intro">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <span class="app-eyebrow">Ready when you are</span>
+              <h2 class="app-h">You're about to enter the booth.</h2>
+              <p class="app-sub">Your camera, calls, screen capture and notifications will be secured for the duration of your vote.</p>
+              <div class="app-card" style="margin-top:auto">
+                <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:linear-gradient(140deg,#1db954,#0b5e2a);display:grid;place-items:center;font-weight:800;color:#fff">KB</span><div><div style="font-size:13px;font-weight:700">Karol Bagh, New Delhi</div><div style="font-size:11px;color:var(--on-dark-2)">is voting right now</div></div></div>
+              </div>
+              <div class="app-btn" style="margin-top:14px;opacity:.55">Press "Enter the booth"</div>
+            </div>
+            <div class="scr" data-cscr="lock">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Securing</span></div>
+              <span class="app-eyebrow">Securing your environment</span>
+              <h2 class="app-h">Building the curtain…</h2>
+              <div style="margin-top:16px" id="lockChecks">
+                <div class="check" data-lc="0"><div class="ic wait">○</div><div>Camera &amp; microphone<small>Disabling access</small></div></div>
+                <div class="check" data-lc="1"><div class="ic wait">○</div><div>Screen recording<small>Blocking capture</small></div></div>
+                <div class="check" data-lc="2"><div class="ic wait">○</div><div>Incoming calls<small>Silencing notifications</small></div></div>
+                <div class="check" data-lc="3"><div class="ic wait">○</div><div>Session token<small>Generating unique identifier</small></div></div>
+              </div>
+              <div class="app-btn" id="lockProgress" style="margin-top:auto;background:var(--d-2);color:var(--on-dark-2)">0 of 4 checks complete</div>
+            </div>
+            <div class="scr" data-cscr="confirm">
+              <div class="scr__status"><span>9:41</span><span style="color:var(--green-bright)">🔒 Secure session</span></div>
+              <span class="app-eyebrow" style="text-align:center;display:block">You are about to cast your vote</span>
+              <div class="ring-wrap">
+                <svg width="150" height="150" viewBox="0 0 150 150">
+                  <circle cx="75" cy="75" r="66" fill="none" stroke="#2a2a2a" stroke-width="8"/>
+                  <circle id="ringFill" cx="75" cy="75" r="66" fill="none" stroke="#1ed760" stroke-width="8" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="0" transform="rotate(-90 75 75)"/>
+                </svg>
+                <div class="ring-num"><span id="ringNum">10</span><small>seconds</small></div>
+              </div>
+              <div class="cand" style="margin-top:4px"><div class="cand__ava c1">VS</div><div><div class="cand__name">Dr. Vikram Sethi</div><div class="cand__party">Bharatiya Janata Party · Karol Bagh</div></div></div>
+              <p class="app-sub" style="text-align:center;margin-top:12px">This action is final and cannot be undone.</p>
+              <div class="app-btn app-btn--green" id="confirmBtn" style="margin-top:14px;opacity:.5;pointer-events:none">Confirm in <span id="confirmCount">10</span>s</div>
+            </div>
+            <div class="scr" data-cscr="done">
+              <div class="scr__status"><span>9:41</span><span>5G ▰▰▰</span></div>
+              <div class="receipt-seal">✓</div>
+              <h2 class="app-h" style="text-align:center">Your vote has been recorded.</h2>
+              <p class="app-sub" style="text-align:center">Encrypted &amp; submitted to the Election Commission of India.</p>
+              <div style="margin-top:12px">
+                <div class="receipt-row"><span>Reference</span><span>BOOTH-2024-KBN-48271</span></div>
+                <div class="receipt-row"><span>Timestamp</span><span>26 Apr 2024 · 11:34 AM</span></div>
+              </div>
+              <div style="background:var(--d-1);border-radius:12px;padding:14px;margin-top:14px">
+                <div style="font-size:12.5px;font-weight:700;color:var(--green-bright)">↻ Anti-coercion override active</div>
+                <div style="font-size:11px;color:var(--on-dark-2);margin-top:4px">Change your vote once within the secure grace window.</div>
+                <div class="app-btn" id="overrideBtn" style="margin-top:12px;font-size:11px;padding:12px">↻ Change my vote</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section class="band cta" id="cta">
+  <div class="wrap cta__inner reveal">
+    <span class="eyebrow">Independent civic platform · not affiliated with ECI</span>
+    <h2>Bring the booth to every voter.</h2>
+    <p class="lead">Remote inclusion without losing trust, ritual, or the social meaning of voting.</p>
+    <div class="cta__btns">
+      <a href="#top" class="btn btn--green">Get started <span class="arrow">→</span></a>
+      <a href="research.html" class="btn btn--ghost-dark">Read the case study</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__col">
+        <a href="#top" class="brand"><img class="brand__logo" src="logo.svg" alt="Booth" width="30" height="30" />Booth</a>
+        <p class="foot__about">A government-grade digital companion bridging physical tradition and digital mobility. The booth comes to you.</p>
+      </div>
+      <div class="foot__col">
+        <h5>Product</h5>
+        <a href="#how">How it works</a>
+        <a href="#curtain">The Digital Curtain</a>
+        <a href="#cta">Get started</a>
+      </div>
+      <div class="foot__col">
+        <h5>Case study</h5>
+        <a href="research.html">The research</a>
+        <a href="research.html#voices">Field interviews</a>
+        <a href="research.html#benchmarks">Global benchmarks</a>
+      </div>
+      <div class="foot__col">
+        <h5>Project</h5>
+        <a href="research.html">Group 12</a>
+        <a href="#cta">Privacy &amp; terms</a>
+        <a href="research.html">Methodology</a>
+      </div>
+    </div>
+    <div class="foot__meta">
+      <div class="credits">Designed by <b>Shreya Patle</b> &amp; <b>Rachit Kayath</b> · Group 12 — Emerging Technologies</div>
+      <div>© 2026 Booth · A civic design study</div>
+    </div>
+  </div>
+  <div class="wordmark">booth<span class="dot">.</span></div>
+  <div class="disclaim">Independent civic platform · Not affiliated with the Election Commission of India</div>
+</footer>
+
+<script src="app.js"></script>
+<script src="interactions.js"></script>
+</body>
 </html>

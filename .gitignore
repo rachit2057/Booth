@@ -1,6 +1,14 @@
-node_modules
-dist
+# OS
 .DS_Store
-*.local
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Vercel
 .vercel
-.netlify
+
+# Node (none used, but just in case)
+node_modules/
+npm-debug.log*
