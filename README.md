@@ -1,43 +1,73 @@
-# Booth — *The booth comes to you.*
+# Booth — deploy guide
 
-A concept platform for **remote digital voting in India** — a government-grade digital companion that carries the ritual, trust, and privacy of the polling booth to the 450 million voters living away from home.
-
-> Independent civic design study · Not affiliated with the Election Commission of India.
-
-## About
-
-Booth reframes the problem that trust in voting is **physical, social, and ritual** — not digital. It enables remote participation while preserving that trust through:
-
-- **Civic Identity** — Aadhaar/EPIC-verified onboarding that auto-detects your home constituency
-- **Informed Choice** — candidate matching against manifesto points and voting records
-- **The Digital Curtain** — environment lockdown, a 10-second intentional-friction confirm delay, and an anti-coercion re-vote override
-- **The Social Ritual** — a non-fakeable digital ink badge
-
-## Tech
-
-A zero-build static site — plain HTML, CSS, and vanilla JS, with [GSAP](https://gsap.com/) loaded from a CDN for the interaction layer. No bundler, no framework.
-
-| File | Purpose |
-|------|---------|
-| `index.html` | Landing page — hero, the scale, how it works, features, the Digital Curtain demo |
-| `research.html` | Case study page — problem framing, field interviews, insights, benchmarks, persona |
-| `styles.css` | Design system + components (hybrid light bands + dark product sections) |
-| `app.js` | Nav state, scroll-progress, counters, the feature switcher, the Digital Curtain demo |
-| `interactions.js` | GSAP enhancement layer — hero entrance, floating/tilting phone, 3D-tilt cards (progressive enhancement) |
-| `logo.svg` | Brand mark |
-
-## Run locally
-
-Any static server works, e.g.:
-
-```bash
-npx serve .
-```
-
-## Deploy
-
-Deployed on **Vercel** as a static site (framework preset: *Other*, no build step). Pushes to `main` auto-deploy.
+This is a complete React + Vite app. Below are three ways to get a live URL you
+can open on your phone. The menu is hidden by default, so it looks like a real app.
+(There's a tiny invisible tap-target in the **top-right corner** that opens a
+screen-jump menu if you ever want it — harmless to leave in.)
 
 ---
 
-Designed by **Shreya Patle** & **Rachit Kayath** · Group 12 — Emerging Technologies
+## Easiest: deploy straight from your computer (no GitHub needed)
+
+You need [Node.js](https://nodejs.org) installed (LTS version is fine).
+
+1. Unzip this folder and open a terminal inside it.
+2. Run:
+   ```
+   npm install
+   npm run build
+   ```
+   This creates a `dist/` folder — that's your finished website.
+
+### Option A — Vercel
+```
+npm install -g vercel
+vercel
+```
+- Log in when prompted (email/GitHub/Google).
+- Accept the defaults. Vercel auto-detects Vite.
+- It prints a live URL (like `https://booth-xxx.vercel.app`). Open it on your phone.
+- To get the permanent production URL: `vercel --prod`
+
+### Option B — Netlify
+```
+npm install -g netlify-cli
+netlify deploy --prod
+```
+- When asked for the publish directory, enter: `dist`
+- It prints a live URL. Done.
+
+### Option C — Netlify Drop (zero command line after build)
+1. Run `npm install && npm run build` (creates `dist/`).
+2. Go to https://app.netlify.com/drop
+3. Drag the **`dist`** folder onto the page.
+4. You instantly get a live URL.
+
+---
+
+## Deploy via GitHub (best if you'll keep editing)
+
+1. Create a new repo on GitHub and push this folder to it.
+2. Go to vercel.com (or netlify.com) → "New Project" → import that repo.
+3. Framework preset: **Vite** (auto-detected). Build command `npm run build`,
+   output dir `dist` — already configured here, so just click Deploy.
+4. Every future `git push` redeploys automatically.
+
+---
+
+## Put it on your phone like an app
+
+1. Open the live URL in Safari (iPhone) or Chrome (Android).
+2. **iPhone:** Share button → "Add to Home Screen."
+   **Android:** ⋮ menu → "Add to Home screen" / "Install app."
+3. It now launches full-screen from your home screen, no browser bars.
+
+---
+
+## Run it locally first (optional)
+```
+npm install
+npm run dev
+```
+Open the printed `http://localhost:5173` — and on your phone, open
+`http://<your-computer-ip>:5173` while on the same Wi-Fi to preview live.
