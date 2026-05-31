@@ -15,13 +15,15 @@ Booth reframes the problem that trust in voting is **physical, social, and ritua
 
 ## Tech
 
-A zero-build static site — plain HTML, CSS, and vanilla JS. No dependencies, no framework.
+A zero-build static site — plain HTML, CSS, and vanilla JS, with [GSAP](https://gsap.com/) loaded from a CDN for the interaction layer. No bundler, no framework.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | All page markup |
-| `styles.css` | Design system + components |
-| `app.js` | Scroll reveals, counters, the interactive Digital Curtain demo |
+| `index.html` | Landing page — hero, the scale, how it works, features, the Digital Curtain demo |
+| `research.html` | Case study page — problem framing, field interviews, insights, benchmarks, persona |
+| `styles.css` | Design system + components (hybrid light bands + dark product sections) |
+| `app.js` | Nav state, scroll-progress, counters, the feature switcher, the Digital Curtain demo |
+| `interactions.js` | GSAP enhancement layer — hero entrance, floating/tilting phone, 3D-tilt cards (progressive enhancement) |
 | `logo.svg` | Brand mark |
 
 ## Run locally

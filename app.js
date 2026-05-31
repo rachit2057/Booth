@@ -7,9 +7,15 @@
   /* ---- Sticky nav + now-voting bar on scroll ---- */
   const nav = document.getElementById("nav");
   const nowbar = document.getElementById("nowbar");
+  const navProgress = document.getElementById("navProgress");
   const onScroll = () => {
     if (window.scrollY > 40) nav.classList.add("scrolled");
     else nav.classList.remove("scrolled");
+    if (navProgress) {
+      const docEl = document.documentElement;
+      const max = docEl.scrollHeight - docEl.clientHeight;
+      navProgress.style.width = (max > 0 ? (docEl.scrollTop / max) * 100 : 0) + "%";
+    }
     if (nowbar) {
       // reveal the player-style bar once the hero has scrolled away,
       // hide it again at the very bottom so it never covers the footer wordmark
